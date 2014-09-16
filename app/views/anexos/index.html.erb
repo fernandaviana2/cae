@@ -1,0 +1,14 @@
+<h1><font style= color:LimeGreen><b><center>Documentações:</center></b></font></h1>
+<p><b><%= link_to 'Anexar mais documentações', new_bolsista_anexo_url ,:class => 'btn btn-info'%></b></p>
+<p>
+  <tr>   
+   <ul> 
+   <% @anexos.each do |anexo| %>
+     <b> <%= anexo.descricao %></b>
+     <%= image_tag (anexo.avatar.url(:medium)) %> 
+  </ul>
+  <td><b><%= link_to 'Imprimir'%>  |   
+  <%= link_to 'Excluir', bolsista_anexo_url(@bolsista, anexo), {method: "Delete", confirm: 'Você tem certeza ?'} %> </b></td>
+ </tr>
+</p>
+<% end %>

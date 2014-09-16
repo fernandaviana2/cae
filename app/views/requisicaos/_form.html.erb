@@ -1,0 +1,23 @@
+<center><fieldset style = "background-color:#C1FFC1; height:100%;  width:800px;"><legend><b>Informações Requisição</b></legend>
+ <p> <label><b>Número do Documento:</b> </label><%= f.text_field :documento  %></p>
+ <p> <label><b>Nome do Setor emissor </b> </label><%= f.text_field :setor_emissor %> </p>
+ <p> <label><b>Data da Requisição:</b> </label><%= f.text_field :data_requisicao  %> </p>
+ <p> <label><b>Quantidade de Bolsista: </b></label><%= f.text_field :quantidade_bolsista %> </p>
+ <p> <label><b> Horário do Bolsista:</b> </label><%= f.text_field :horario_bolsista %> </p>
+ <p> <label><b>Assunto: </label></b><%= f.text_field :assunto %> </p>
+ <p> <label> <b>Nome de Bolsista:</b></label> <%= f.text_field :nome_de_bolsista %> </p>    
+    
+ <p><b><%= f.label :ConteúdoMemorando %></b><br>
+  <%= f.text_area :conteudo %> <br><br> </p>
+  
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('Voltar'),
+                requisicaos_path, :class => 'btn' %>
+  </div>
+  
+</fieldset><br><br></center>
+  
+ 
+   
+ 

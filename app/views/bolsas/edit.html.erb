@@ -1,0 +1,6 @@
+<%= flash_message %>
+<%= form_for @bolsa do |f| %>
+   <%= render partial: "form", locals: {f: f} %>
+   <%= f.submit "Atualizar" %>
+   <b> <%= link_to 'Voltar', action: 'show' , controller: 'bolsistas',  id: @bolsa.bolsista %></b>
+<% end %>

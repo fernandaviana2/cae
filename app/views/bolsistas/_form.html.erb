@@ -1,0 +1,50 @@
+<%= form_for @bolsista, :html => { :class => 'form-horizontal' } do |f| %>
+  
+<center><fieldset style = "background-color:#C1FFC1; height:100%;  width:800px;"><legend><b>Informações de Bolsistas</b></legend>
+  
+<p> <label><b>CPF:</b> </label><%= f.text_field :cpf  %></p>
+
+<p><label><b>Matricula </b> </label><%= f.text_field :matricula %></p>
+  
+<p><label><b>Número Pasta:</b> </label><%= f.text_field :numero_pasta  %> </p>
+  
+<p><label><b>Nome: </b></label><%= f.text_field :nome %></p>
+  
+<p><label><b>Endereço: </b> </label><%= f.text_field :endereco %></p>
+  
+<p><label><b>Complemento: </label></b><%= f.text_field :complemento %></p>
+  
+<p><label> <b>Bairro:</b></label> <%= f.text_field :bairro %></p>
+
+<p><label><b>Cidade: </label></b><%= f.text_field :cidade %> </p>
+ 
+<p><label><b>Estado: </label></b><%= f.select :estado, (["   ", "AC", "AL ", "AP ", "AM ", "BA ", " CE", "DF ", "ES ", "GO ", "MA ", "MT ", "MS ","MG ", "PR ", "PB ", "PA ", "PE ", "PI ", "RJ ", "RN ", "RS ", "RO ", "RR ", "SC ", "SP ", "SE ", "TO"])%></p>
+   
+<p><label><b>Telefone Residencial: </label></b><%= f.text_field :tel_residencial %></p>
+   
+<p><label><b>Telefone Celular: </label></b><%= f.text_field :tel_celular %> </p>
+ 
+<p><label><b>Email: </label></b><%= f.text_field :email %></p>
+   
+<p><label><b>RG: </label></b><%= f.text_field :rg %></p>
+   
+<p><label><b>Data de Nascimento: </label></b><%= f.text_field :data %> </p>
+ 
+<p><label><b>Nome de Mãe: </label></b><%= f.text_field :nome_mae %></p>
+   
+<p><label><b>Curso: </label></b> <%= f.select :curso_id, (options_for_curso()) %></p>   
+  
+<p> <b><%= f.label :Observação %></b>
+  <%= f.text_area :observacao %> <br><br>
+  </p>
+  
+<p> <label>Foto: </label> <%= f.file_field :avatar %> </p>
+<p>  
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('Voltar'),
+                bolsistas_path, :class => 'btn' %>
+  </div>
+ 
+</fieldset><br><br></center>
+<% end %>

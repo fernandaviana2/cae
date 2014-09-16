@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_entrada: MyString
+  horario_atuacao: MyString
+  data_saida: MyString
+  campu: MyString
+  atribuicoes: MyText
+  situacao: MyString
+
+two:
+  data_entrada: MyString
+  horario_atuacao: MyString
+  data_saida: MyString
+  campu: MyString
+  atribuicoes: MyText
+  situacao: MyString

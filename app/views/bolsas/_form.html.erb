@@ -1,0 +1,11 @@
+<p><fieldset style = "background-color:#FFF8DC;  height:100%;  width:900px; "><legend> <b>Cadastro de Informações da Bolsa</b></legend>
+ <p><b> <label> Setor: </label> </b><%= f.select :setor_id, (options_for_setor()), :include_blank => true %></p> 
+ <p><b> <label> Data de Entrada: </label></b> <%= f.text_field :data_entrada, :id => "date" %></p>
+ <p><b><label>  Horário de atuação  </label></b> <%= f.select :horario_atuacao, ([["        " ], ["07h às 10h" ], ["08h às 11h" ], ["09h às 12h" ], ["10h às 13h" ], ["11h às 14h" ], ["12h às 15h" ], ["13h às 16h" ], ["14h às 17h" ], ["15h às 18h" ], ["16h às 19h" ], ["17h às 20h" ], ["18h às 21h" ], ["19h às 22h" ]]) %></p> 
+  <p><b><label> Campus: <%= f.select :campu, ([["      "], ["Campos-Centro"], ["Reitoria" ]]) %> </b></p>
+   <b> <%= f.label :Atribuições %></b><br>
+   <%= f.text_area :atribuicoes %> <br><br>
+</fieldset></p>
+  
+  <%= f.hidden_field :bolsista_id %>
+ 

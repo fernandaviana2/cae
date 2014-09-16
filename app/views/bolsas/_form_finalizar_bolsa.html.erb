@@ -1,0 +1,11 @@
+<p><h1><font style= color:LimeGreen><b><center>Finalizando Bolsa</center></b></font></h1></p>
+ <p><fieldset style = "background-color:#FFF8DC; height:100%;  width:700px; "><legend><b>Informações para finalização da bolsa</b></legend>
+ <p><b> <label> Data de Saída:  </label></b> <%= f.text_field :data_saida, :id => "date" %></p>
+ <p><b><label> Motivo:  </label></b> <%= f.select :motivo, ([[""], ["Transferência", ], ["Término do curso",  ], ["Trocou de Bolsa",  ], ["Outros",  ]]) %><p>
+ </fieldset> </p>
+ 
+  <%= hidden_field_tag "bolsa[situacao]", "Inativo" %>
+  
+  <%= f.submit "Finalizar" %>
+  
+  

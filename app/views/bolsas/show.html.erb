@@ -1,0 +1,14 @@
+<%= flash_message %>
+<h1><font style= color:LimeGreen><center>Dados Bolsas</center></font></h1>
+
+ <p><b>Data de Entrada: </b> <%= @bolsa.data_entrada %></p>
+ <p><b>Horário de Atuação: </b><%= @bolsa.horario_atuacao %></p>
+ <p><b>Campus: </b><%= @bolsa.campu %></p>
+ <p><b>Atribuições: </b><%= @bolsa.atribuicoes %></p>
+ <p><b>Situação: </b><%= @bolsa.situacao %></p>
+ <p><b>Bolsista: </b><%= @bolsa.bolsista.nome %></p>
+ <p><b>Setor: </b><%= @bolsa.setor.nome_setor %></p>
+
+<%= link_to 'Editar', action: "edit", id: @bolsa %>
+<%= link_to 'Voltar', controller: "bolsista", action: 'show' %>
+

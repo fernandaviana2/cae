@@ -1,0 +1,6 @@
+<p><center> <b><font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Cadastro Banco: </font></b></center></p> 
+<%= flash_message %>
+<%= form_for @banco do |f| %>
+  <%= render partial: "form", locals: {f: f} %>  
+<% end %>
+

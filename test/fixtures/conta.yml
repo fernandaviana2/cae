@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  numero_agencia: MyString
+  numero_conta: MyString
+
+two:
+  numero_agencia: MyString
+  numero_conta: MyString

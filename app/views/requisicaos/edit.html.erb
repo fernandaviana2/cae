@@ -1,0 +1,6 @@
+<p><h1><font style= color:LimeGreen><center>Atualizando Requisição</center></font></h1></p>
+<%= flash_message %>
+<%= form_for @requisicao do |f| %>
+   <%= render partial: "form", locals: {f: f} %>
+   
+<% end %>

@@ -1,0 +1,9 @@
+<%= flash_message %>
+
+<center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Cadastro Conta:  </font></b></center>  
+ <%= form_for @conta, :url => {action: 'create', controller: 'contas', :bolsista_id => @bolsista} do |f| %>
+ <%= render partial: "form", locals: {f: f} %>
+ <%= f.hidden_field :bolsista_id %>
+  
+<% end %>
+

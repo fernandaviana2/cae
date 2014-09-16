@@ -1,0 +1,19 @@
+<center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Lista de Bancos </font></b></center>  <br><br><br> 
+
+<p><td> <h3><%= link_to ' Cadastrar Banco', new_banco_path %></h3> </td></p>
+<table class="table table-striped">
+  <tr>
+    <th>Nome do Banco: </th>
+    <th>Número do Banco:</th>
+    <th></th>
+  </tr>
+
+<% @bancos.each do |banco| %>
+  <tr>
+   <td><b><%=link_to banco.nome_banco, action: 'show', id: banco %></b></td>
+   <td><%= banco.numero_banco %></td>
+   <td> <b><%= link_to 'Editar', edit_banco_path(banco), :class => 'btn btn-warning' %>  |   
+    <%= link_to 'Excluir', {action: 'destroy', id: banco}, {method: "Delete", confirm: 'Você tem certeza ?'} %> </b></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,18 @@
+<fieldset style = "background-color:#C1FFC1; position:relative; height:100%;  width:550px; float: center; "><legend><b>Informações Banco</b></legend>
+
+<p> <b><label>Número do Banco:</label></b> <%= f.text_field :numero_banco %> </p>  
+<p><b><label> <%= t(:field_nome_banco) %> </label></b> <%= f.text_field :nome_banco %></p>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('Voltar'),bancos_path, :class => 'btn' %>
+  </div>
+  
+</fieldset><br>
+  
+  
+  
+
+   
+
+
+

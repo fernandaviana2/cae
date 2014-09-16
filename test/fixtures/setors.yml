@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome_setor: MyString
+  coordenador: MyString
+  total_setor: 1
+  email_setor: MyString
+
+two:
+  nome_setor: MyString
+  coordenador: MyString
+  total_setor: 1
+  email_setor: MyString

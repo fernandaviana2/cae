@@ -1,0 +1,24 @@
+<center><p><fieldset style = "background-color:#C1FFC1;height:100%;  width:550px;"></p>
+ <p>
+ <b><label> Nome do Setor: </label></b><%= f.text_field :nome_setor %>
+ </p>
+  <p>
+  <b><label> Coordenador:</label> </b><%= f.text_field :coordenador %>
+  </p>
+  <p>
+  <b><label>Email do Setor: </label> </b><%= f.text_field :email_setor %>
+  </p>
+  <p>
+  <b><label>Ramal: </label></b><%= f.text_field :ramal %>
+  </p>
+  
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('Voltar'),
+                setors_path, :class => 'btn' %>
+  </div>
+  
+</fieldset><br><br></center>
+  
+   
+   

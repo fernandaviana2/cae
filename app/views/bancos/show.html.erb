@@ -1,0 +1,15 @@
+<%= flash_message %>
+<p><center> <b><font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Dados do Banco: </font></b></center></p> 
+<center><p><fieldset style = "background-color:#C1FFC1; height:100%;  width:700px;">
+ <p><b>Número do Banco: </b>
+  <%= @banco.numero_banco %>
+ </p>
+ <p><b>Nome do Banco: </b>
+  <%= @banco.nome_banco %>
+ </p>
+ <p> <b> <%= link_to 'Editar', edit_banco_url(@banco),:class => 'btn btn-warning' %>
+ <%= link_to 'Voltar', bancos_url, :class => 'btn' %></b></p>
+</fieldset><br></center>
+
+
+ 

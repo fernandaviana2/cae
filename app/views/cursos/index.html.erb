@@ -1,0 +1,20 @@
+<p><center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Lista de Cursos </font></b></center></p>  
+
+<td><h3><%= link_to ' Cadastrar Curso', new_curso_path %></h3> </td><br><br>
+<table class="table table-striped">
+  <tr>
+    <th>Nome do Curso</th>
+    <th>Total Período</th>
+    <th></th>
+  </tr>
+
+<% @cursos.each do |curso| %>
+  <tr>
+    <td><b><%=link_to curso.nome_curso, action: 'show', id: curso %></b></td>
+    <td><%= curso.numero_periodo %></td>
+    <td> <b><%= link_to 'Editar', edit_curso_path(curso), :class => 'btn btn-warning'  %> |
+    <%= link_to 'Excluir', {action: 'destroy', id: curso}, {method: "Delete", confirm: 'Você tem certeza ?'} %> </b></td>  
+        
+  </tr>
+<% end %>
+</table>

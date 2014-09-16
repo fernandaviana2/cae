@@ -1,0 +1,14 @@
+<center><fieldset style = "background-color:#C1FFC1; height:100%;  width:550px; "><legend><b>Informações Conta</b></legend>
+  <p><b><label>Número da Agência : </label></b><%= f.text_field :numero_agencia %> </p>
+  <p><b><label>Número da Conta: </label></b> <%= f.text_field :numero_conta %><br> </p>
+  <p><b> <label> Nome do Banco: </label> </b><%= f.select :banco_id, (options_for_banco()) %> </p> 
+   
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <b><%= link_to 'Voltar', controller: 'bolsistas', action: 'show', id: @conta.bolsista%></b><br>
+  </div>
+</fieldset><br><br></center>
+   
+
+ 
+

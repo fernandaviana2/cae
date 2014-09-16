@@ -1,0 +1,28 @@
+<%= flash_message %>
+<p><h1><font style= color:LimeGreen><center>Dados da Requisição</center></font></h1></p>
+
+<center><fieldset style = "background-color:#C1FFC1 ;height:200%;  width:550px;">
+<p> <b>Número do documento: </b> <%= @requisicao.documento %></p>
+
+<p> <b>Data da Requisição: </b> <%= @requisicao.data_requisicao %></p>
+
+<p> <b>Quantidade de Bolsista: </b> <%= @requisicao.quantidade_bolsista %></p>
+
+<p> <b>Horário do Bolsista: </b> <%= @requisicao.horario_bolsista %></p>
+  
+<p>  <b>Assunto: </b> <%= @requisicao.assunto %></p>
+  
+<p>  <b>Nome de Bolsista: </b> <%= @requisicao.nome_de_bolsista %></p>
+
+<p> <b>Conteúdo do Documento: </b> <%= @requisicao.conteudo %></p>
+
+<p> <b> <%= link_to 'Editar', edit_requisicao_url(@requisicao),:class => 'btn btn-warning' %>
+
+  <%= link_to 'Voltar', requisicaos_url, :class => 'btn' %></b></p>
+
+
+  </fieldset><br><br></center>
+
+ 
+
+

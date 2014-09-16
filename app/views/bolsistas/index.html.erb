@@ -1,0 +1,23 @@
+<p><center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Lista de Bolsistas </font></b></center></p>  
+
+<td><h3><%= link_to ' Cadastrar Bolsistas', new_bolsista_path %></h3> </td><br><br>
+
+<table class="table table-striped">
+  <tr>
+    <th></th>
+    <th>CPF</th>
+    <th>Matricula</th>
+    <th>Nome</th>
+    <th></th>
+  </tr>
+
+<% @bolsistas.each do |bolsista| %>
+  <tr>
+    <td><%= bolsista.cpf %></td>
+    <td><%= bolsista.matricula %></td>
+    <td><b><%=link_to bolsista.nome, action: 'show', id: bolsista %></b></td>
+    <td> <b><%= link_to 'Editar', edit_bolsista_path(bolsista), :class => 'btn btn-warning' %> |
+    <%= link_to 'Excluir', {action: 'destroy', id: bolsista}, {method: "Delete", confirm: 'Você tem certeza ?'} %> </b></td>  
+  </tr>
+<% end %>
+</table>

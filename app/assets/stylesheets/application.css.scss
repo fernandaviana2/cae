@@ -1,0 +1,125 @@
+.menu{
+ border:none;
+ border:0px;
+ margin:0px;
+ padding:0px;
+ font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Times New Roman, Helvetica, sans-serif;
+ font-size:18px;
+ font-weight:bold;
+ }
+.menu ul{
+ background:#000000;
+ height:50px;
+ list-style:none;
+ margin:0;
+ padding:0;
+ -webkit-border-radius: 15px;
+ -moz-border-radius: 15px;
+ border-radius: 15px;
+ -webkit-box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+ -moz-box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+ box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+ }
+ .menu li{
+ float:left;
+ padding:0px 0px 0px 15px; 
+ }
+ .menu li a{ 
+ color:#FFFFF0;  #cor da fonte
+ display:block;
+ font-weight:normal;
+ line-height:50px;
+ margin:0px;
+ padding:0px 25px;
+ text-align:center;
+ text-decoration:none;
+ }
+ .menu li a:hover{
+ background:#000000;
+ color:#000000;   #cor da letra do menu horizontal quando selecionado
+ text-decoration:none;
+ -webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+ -moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+ box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+ }
+ .menu ul li:hover a{
+ background:#BCEE68;  #cor da seleção da opção do menu horizontal
+ color:#000000;    #cor das letras ao serem selecionadas
+ text-decoration:none;
+ }
+ .menu li ul{
+ display:none;
+ height:auto;
+ padding:0px;
+ margin:0px;
+ border:0px;
+ position:absolute;
+ width:200px;
+ z-index:200;
+ }
+ .menu li:hover ul{
+ display:block; 
+ }
+ .menu li li {
+ display:block;
+ float:none;
+ margin:0px;
+ padding:0px;
+ width:200px;
+ background:#C0FF3E; #cor do menu que desce.
+ 
+ /*this is where the rounded corners for the dropdown disappears*/
+ }
+ .menu li:hover li a{
+ background:none;
+ }
+ .menu li ul a{
+ display:block;
+ height:50px;
+ font-size:18px; #tamanho da fonte do menu que desce
+ font-style:normal;
+ margin:0px;
+ padding:0px 10px 0px 15px;
+ text-align:left;
+ }
+ .menu li ul a:hover, .menu li ul li:hover a{
+ border:0px;
+ color:#FFFFF0; # cor da seleção no menu que descem
+ text-decoration:none;
+ background: #000000;
+ -webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+ -moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+ box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3); 
+ }
+ 
+.notice, .error, .warning, .info {
+font-weight: bold;
+margin: -10px 0 15px 0;
+padding: 5px 5px 5px 27px;
+}
+
+.notice {
+border: 1px solid #9c9;
+background: #e2f9e3 url(../images/tick.png) no-repeat 5px center;
+color: #060;
+}
+
+.error {
+border: 1px solid #c68484;
+background: #fcc url(../images/cross.png) no-repeat 5px center;
+color: #c00;
+}
+
+.warning {
+border: 1px solid #dd0;
+background: #ffc url(../images/error.png) no-repeat 5px center;
+color: #000;
+}
+
+.info {
+border: 1px solid #82c2d4;
+background: #ebf5f8 url(../images/information.png) no-repeat 5px center;
+color: #000;
+}
+
+

@@ -1,0 +1,25 @@
+<p><center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Lista de Requisições  </font></b></center></p>
+ <p> <td><h3><%= link_to ' Cadastrar Requisição', new_requisicao_path %></h3> </td></p>
+  <table class="table table-striped">
+  <tr>
+    <th>Nome do Setor emissor</th>
+    <th>Número do Documento</th>
+    <th>Data Requisição</th>
+    <th>Assunto</th>
+    <th></th>
+   </tr>
+
+<% @requisicaos.each do |requisicao| %>
+  <tr>
+    <td><b><%=link_to requisicao.setor_emissor, action: 'show', id: requisicao %></b></td>
+    <td><%= requisicao.documento %></td>
+    <td><%= requisicao.data_requisicao %></td>
+    <td><%= requisicao.assunto %></td>
+    
+    <td> <b><%= link_to 'Editar', edit_requisicao_path(requisicao), :class => 'btn btn-warning'  %> |     
+    
+    <%= link_to 'Excluir', {action: 'destroy', id: requisicao}, {method: "Delete", confirm: 'Você tem certeza ?'} %></b> </td>
+         
+    </tr>
+<% end %>
+</table>

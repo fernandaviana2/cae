@@ -1,0 +1,11 @@
+<%= flash_message %>
+
+<%= form_for @conta do |f| %>
+<center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Editando Conta:  </font></b></center>  <br><br><br>
+  <%= render partial: "form", locals: {f: f} %>
+  <%= f.submit "Atualizar" %>
+ <b> <%= link_to 'Voltar', action: 'show', controller: 'bolsistas', id: @conta.bolsista %></b>
+ 
+ <%= f.hidden_field :bolsista_id %>
+   
+<% end %>

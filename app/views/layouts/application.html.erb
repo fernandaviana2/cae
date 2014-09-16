@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CAE</title>
+<meta name="viewport" content="width=device-width", initial-scale=1.0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+
+
+		 <%= stylesheet_link_tag :all%>
+     <%= javascript_include_tag :application %>
+     <%= csrf_meta_tag %>
+     
+</head>
+<body>
+
+
+<p>
+ <center>  <%= image_tag "logoiff.jpg", {width: "1000px", height: "100px", class: "left"} %></center>
+</p>
+
+<div id="menu-wrapper">
+	<div id="menu" class="container">
+		<ul><strong>
+			<li><b><%= link_to 'Bancos', action: "index", controller: "/bancos" %></b></li>
+			<li><%= link_to 'Bolsistas', action: "index", controller: "/bolsistas" %></li>
+			<li><%= link_to 'Cursos', action: "index", controller: "/cursos" %></li>
+			<li><%= link_to 'Requisições', action: "index", controller: "/requisicaos" %></li>
+			<li><%= link_to 'Setores', action: "index", controller: "/setors" %></li>
+			<li><%= link_to 'Folha', action: "index", controller: "/setors" %></li>
+			<li><%= link_to 'Declarações', action: "index", controller: "/setors" %></li>
+			<li><%= link_to 'Mapa', action: "index", controller: "/setors" %></li>
+	 </strong></ul>
+	</div>
+</div>
+
+     
+     
+     <div id="page" class="container">
+	     <p><center> <div id="usuario_nav"> <font style= "color:red" >
+       <% if usuario_signed_in? %> 
+            <b>Você acessou como:  </b><%= current_usuario.email %> 
+           <b> <%= link_to "Sair", destroy_usuario_session_path, :method => 'delete' %> </b>
+        <% end %> </font>
+       </div></center></p>
+	     
+   
+  <p><center>  <img class="center" src="images/cae.jpg" width="200" height="150" /></center></p><br>
+   
+   
+                  
+                  <%= yield %> 
+</div>
+</body>
+</html>

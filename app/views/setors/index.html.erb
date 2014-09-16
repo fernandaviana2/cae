@@ -1,0 +1,30 @@
+
+
+<p><center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Lista de Setores  </font></b></center></p>  
+
+  <td><h3> <%= link_to ' Cadastrar Setor', new_setor_path %></h3> </td><br><br>
+
+<table class="table table-striped" >
+
+  <tr>
+    
+    <th>Nome do Setor</th>
+    <th>Coordenador</th>
+    <th>Email do Setor</th>
+    <th>Ramal</th>
+    <th></th>
+    </tr>
+
+<% @setors.each do |setor| %>
+  <tr>
+    
+    <td><b><%=link_to setor.nome_setor, action: 'show', id: setor %></b></td>
+    <td><%= setor.coordenador %></td>
+    <td><%= setor.email_setor %></td>
+    <td><%= setor.ramal %></td>
+       
+    <td> <b><%= link_to 'Editar', edit_setor_path(setor), :class => 'btn btn-warning' %> </b>| </td>
+       
+    </tr>
+<% end %>
+</table>

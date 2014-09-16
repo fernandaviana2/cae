@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_requisicao: MyString
+  quantidade_bolsista: 1
+  horario_bolsista: MyString
+  assunto: MyString
+  nome_de_bolsista: MyString
+
+two:
+  data_requisicao: MyString
+  quantidade_bolsista: 1
+  horario_bolsista: MyString
+  assunto: MyString
+  nome_de_bolsista: MyString

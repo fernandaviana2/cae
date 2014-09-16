@@ -1,0 +1,29 @@
+<p><h1><font style= color:LimeGreen><center><b>Dados do Setor</b></center></font></h1></p>
+
+<%= flash_message %>
+
+<center><fieldset style = "background-color:#C1FFC1 ; height:100%;  width:550px;">
+<p>
+  <b>Nome Setor: </b>
+  <%= @setor.nome_setor %>
+</p>
+
+<p>
+  <b>Coordenador: </b>
+  <%= @setor.coordenador %>
+</p>
+<p>
+  <b>Email Setor: </b>
+  <%= @setor.email_setor %>
+</p>
+  <p>
+  <b>Ramal: </b>
+  <%= @setor.ramal %>
+</p>
+
+ <p> <b> <%= link_to 'Editar', edit_setor_url(@setor),:class => 'btn btn-warning' %>
+
+  <%= link_to 'Voltar', setors_url, :class => 'btn' %></b></p>
+
+</fieldset><br><br></center>
+

@@ -1,0 +1,118 @@
+
+<p><h1><font style= color:LimeGreen><center>Dados de Bolsistas </center></font></h1></p>
+<%= flash_message %>
+ <right> <% if @bolsista.anexos.present? %>
+   <p> <b> <%= link_to 'Visualizar Documentação', bolsista_anexos_url(@bolsista),:class => 'btn btn-info' %></b></p>
+ <%else%> 
+    <p> <b> <%= link_to 'Anexar Documentação', new_bolsista_anexo_url(@bolsista),:class => 'btn btn-info' %></b></p>
+ <%end%></right>
+ 
+<center><fieldset style = "background-color:#C1FFC1; height:300%;  width:700px;"><b><legend>Informações de Bolsista </legend></b>
+
+<p><%= image_tag @bolsista.avatar.url(:medium) %></p>
+
+<p><b>CPF: </b><%= @bolsista.cpf %></p>
+
+<p><b>Matricula: </b> <%= @bolsista.matricula %></p>
+
+<p><b>Número Pasta: </b><%= @bolsista.numero_pasta %></p>
+
+<p><b>Nome: </b> <%= @bolsista.nome %></p>
+
+<p><b>Endereço: </b> <%= @bolsista.endereco %></p>
+
+<p><b>Complemento: </b><%= @bolsista.complemento %></p>
+
+<p><b>Bairro: </b> <%= @bolsista.bairro %></p>
+
+<p><b>Cidade: </b> <%= @bolsista.cidade %></p>
+
+<p><b>Estado: </b><%= @bolsista.estado %></p>
+
+<p><b>Telefone Residencial: </b><%= @bolsista.tel_residencial %></p>
+
+<p><b>Telefone Celular: </b><%= @bolsista.tel_celular %></p>
+
+<p><b>Email: </b><%= @bolsista.email %></p>
+
+<p><b>RG: </b><%= @bolsista.rg %></p>
+
+<p><b>Data de Nascimento: </b><%= @bolsista.data %></p>
+
+<p><b>Nome de Mãe: </b> <%= @bolsista.nome_mae %></p>
+
+<p> <b>Observação: </b>
+  <%= @bolsista.observacao %>
+</p>
+
+<p><b>Data de cadastro no Sistema:</b><%= @bolsista.created_at %></p>
+<p><b>Data de atualização de informação:</b><%= @bolsista.updated_at %></p>
+
+<p><b> <%= link_to 'Editar', edit_bolsista_url(@bolsista),:class => 'btn btn-warning' %>
+       <%= link_to 'Voltar', bolsistas_url, :class => 'btn' %></b></p>
+
+</fieldset><br><br></center>
+
+<center><fieldset style = "background-color:#C1FFC1; height:300%;  width:700px;"><legend><b>Informações do Curso </b></legend>
+  <% if @bolsista.curso %>
+      <p> <b>Nome do curso: </b> <%= @bolsista.curso.nome_curso %></p> 
+     <p> <b>Período Atual: </b> <%= @bolsista.periodo_atual %></p>
+     <p> <b>Semestre Inicial do Curso: </b> <%= @bolsista.semestre_inicial_curso %></p>
+     <p> <b>Ano Inicial do Curso: </b> <%= @bolsista.ano_inicial_curso %></p>
+     <p> <b> <%= link_to 'Editar', edit_bolsista_curso_url(@bolsista), :class => 'btn btn-warning' %>
+     <%= link_to 'Voltar', bolsistas_url, :class => 'btn'%></b></p>
+  <% end %>
+</fieldset><br><br></center>
+
+
+<center><fieldset style ="background-color:#C1FFC1; height:300%;  width:700px;">
+  <legend><b>Informações de Conta </b></legend>
+  <% if @bolsista.conta %>
+     <p> <b>Número Conta: </b> <%= @bolsista.conta.numero_conta %></p>
+     <p> <b>Número Agência: </b> <%= @bolsista.conta.numero_agencia %></p>
+     <p> <b>Nome Banco: </b> <%= @bolsista.conta.banco.nome_banco %></p>
+  <%else%>
+  <%= link_to "Cadastrar Conta", action: "new", :controller => "contas", bolsista_id: @bolsista %>
+      
+  <% end %>
+</fieldset><br><br></center>
+
+
+<center><fieldset style ="background-color:#C1FFC1; height:300%;  width:700px;"><legend><b>Situação </b></legend>
+  
+  <% if @bolsista.bolsas.any? %>
+    <table border="2">
+      <tr>
+         <th></th>
+         <th>Setor</th>
+         <th>Data de Entrada</th>
+         <th>Data de Saída</th>
+         <th>Situação</th>
+      </tr>    
+  <% @bolsista.bolsas.each do |bolsa| %>
+  <p><tr>
+    <td><%= link_to 'Finalizar Bolsa', action: 'edit_finalizar_bolsa' , controller: 'bolsas' %></b></td>   
+    <td><%= bolsa.setor %></td>
+    <td><%= bolsa.data_entrada %></td>
+    <td><%= bolsa.data_saida %></td>
+    <td><%= bolsa.situacao %></td>
+    
+    <td> <b><%= link_to 'Editar', edit_finalizar_bolsa_path(bolsa), :class => 'btn btn-warning' %> </b></td>  
+  </tr></p>
+    
+  <% end %>
+ <p> Para cadastrar uma nova bolsa finalize a anterior<p>
+  </table></p>
+  
+  <%elsif%>
+  
+  <%end%>
+  
+  <%if @bolsista.permite_cadastro_bolsa? %>
+    <%= link_to "Cadastrar Bolsa", action: "new", :controller => "bolsas", bolsista_id: @bolsista %>
+      
+  <% end %>
+ 
+</fieldset><br><br></center>
+
+</div>

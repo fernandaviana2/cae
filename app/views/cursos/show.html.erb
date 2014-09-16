@@ -1,0 +1,14 @@
+<%= flash_message %>
+
+<p><center> <b> <font style="font-size:30pt; color:LimeGreen; line-height:30pt; type=ArialBlack"> Dados Curso:  </font></b></center></p>
+<fieldset style = "background-color:#C1FFC1; height:100%;  width:550px;">
+
+ <p><b>Nome Curso: </b><%= @curso.nome_curso %></p>
+ <p><b>Total Período: </b> <%= @curso.numero_periodo %></p>
+ <p> <b> <%= link_to 'Editar', edit_curso_url(@curso),:class => 'btn btn-warning' %>
+ <%= link_to 'Voltar', cursos_url, :class => 'btn' %></b></p>
+
+</fieldset><br><br></center>
+
+  
+

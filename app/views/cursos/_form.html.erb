@@ -1,0 +1,14 @@
+<center><fieldset style = "background-color:#C1FFC1; height:100%;  width:550px;"><legend><b>Informações Curso</b></legend>
+  
+ <p><b><label>Nome do Curso:</label></b> <%= f.text_field :nome_curso %></p>
+ <p><b><label>Total Período: </label></b><%= f.text_field :numero_periodo %> </p>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('Voltar'),cursos_path, :class => 'btn' %>
+  </div>
+  
+</fieldset><br><br></center>
+   
+
+   
+

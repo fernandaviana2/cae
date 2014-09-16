@@ -1,0 +1,7 @@
+<h1><font style= color:LimeGreen><b><center>Documentações:</center></b></font></h1>
+<p><b><%= link_to 'Anexar mais documentos', new_bolsista_anexo_url %></b></p>
+<p>
+  <b> <%= @anexo.descricao %></b>
+  <%= image_tag (@anexo.avatar.url(:medium)) %> 
+  <b><%= link_to 'Excluir', bolsista_anexo_path(@bolsista,@anexo), {method: "Delete", confirm: 'Você tem certeza '} %></b>
+</p>

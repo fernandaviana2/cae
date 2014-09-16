@@ -1,0 +1,7 @@
+<%= flash_message %>
+<%= form_for @bolsa, :url => {action: 'finalizar_bolsa'} do |f| %>
+  <%= render partial: "form_finalizar_bolsa", locals: {f: f} %>
+  <b> <%= link_to 'Voltar', action: 'show' , controller: 'bolsistas',  id: @bolsa.bolsista %></b>
+<% end %>
+
+
